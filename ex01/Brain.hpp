@@ -10,11 +10,11 @@ class Brain
 
     public:
         Brain();
-        Brain(std::string &ideas); //should i add const here?
+        Brain(std::string &idea); //should i add const here?
         Brain(Brain const& other);
         Brain& operator=(Brain const& other);
         ~Brain();
-}
+};
 
 
 
