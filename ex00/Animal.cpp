@@ -1,19 +1,20 @@
 #include "Animal.hpp"
 
-Animal::Animal(): type("DEFAULT")
+Animal::Animal(): _type("DEFAULT")
 {
    std::cout << "Animal's default constructor called." << std::endl;
 }
 
-Animal::Animal(std::string ty):type(ty)
+Animal::Animal(std::string ty):_type(ty)
 {
    std::cout << "Animal's Parametric Constuctor called." << std::endl;
 }
 
 std::string Animal::getType() const
 {
-   return this->type;
+   return this->_type;
 }
+
 Animal::Animal(Animal const& other)
 {
    std::cout << "Animal's Copy constructor called." << std::endl;
@@ -24,7 +25,7 @@ Animal& Animal::operator=(Animal const& rhs)
 {
    std::cout << "Animal's Copy Assignement called." << std::endl;
    if (this != &rhs)
-      this->type = rhs.getType();
+      this->_type = rhs.getType();
    return *this;
 }
 

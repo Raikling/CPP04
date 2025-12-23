@@ -30,9 +30,9 @@ int main(void)
 //wrong _animal_test
 // int main(void)
 // {
-// const WrongAnimal *wr = new WrongAnimal("HEHEHEHe");
+//    const WrongAnimal *wr = new WrongAnimal();
 //    std::cout << "------------------" << std::endl;
-//    const WrongAnimal *wrc = new WrongCat("GGGGGG");
+//    const WrongAnimal *wrc = new WrongCat();
 
 //    std::cout << "WR type is: " << wr->getType() << std::endl;
 //    std::cout << "WRC type is: " << wrc->getType() << std::endl;
