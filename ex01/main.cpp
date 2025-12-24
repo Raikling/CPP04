@@ -2,45 +2,39 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+
 
 
 
 int main(void)
 {
-   const Animal* meta = new Animal();
-   const Animal* j = new Dog();
-   const Animal* i = new Cat();
-   std::cout << j->getType() << " " << std::endl;
-   std::cout << i->getType() << " " << std::endl;
-   i->makeSound(); //will output the cat sound!
-   j->makeSound();
-   meta->makeSound();
+   const int size = 20;
+   Animal* animals[size];
 
-   delete meta;
-   delete i;
-   delete j;
+   for (int i = 0; i < size; i++)
+   {
+      if (i < (size / 2))
+         animals[i] = new Cat();
+      else
+         animals[i] = new Dog();
+   }
 
+   std::cout <<"------- SOUNDS----------" << std::endl;
+   for (int i = 0; i < size; i++)
+   {
+      std::cout << animals[i]->getType() << " NR " << i + 1 << ": ";
+      animals[i]->makeSound();
+   }
+
+   // std::cout << "--------DELETING----------" << std::endl;
+   // for (int i = 0; i < size; i++)
+   // {
+   //    delete animals[i];
+   // }
+
+   
+   
    return 0;
 }
 
 
-
-//wrong _animal_test
-// int main(void)
-// {
-//    const WrongAnimal *wr = new WrongAnimal();
-//    std::cout << "------------------" << std::endl;
-//    const WrongAnimal *wrc = new WrongCat();
-
-//    std::cout << "WR type is: " << wr->getType() << std::endl;
-//    std::cout << "WRC type is: " << wrc->getType() << std::endl;
-//    wr->makeSound();
-//    wrc->makeSound();
-
-//    delete wr;
-//    delete wrc;
-
-//    return 0;
-// }

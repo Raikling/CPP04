@@ -2,12 +2,15 @@
 #define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal
 {
+   private:
+      Brain* _brain;
    public:
       Dog();
-      Dog(std::string ty);
+      Dog(std::string type, Brain& brain);
       Dog(Dog const& other);
       Dog& operator=(Dog const& rhs);
       ~Dog();

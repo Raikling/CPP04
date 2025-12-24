@@ -1,29 +1,38 @@
 #include "Dog.hpp"
 
-
 Dog::Dog() : Animal("Dog")
 {
-   std::cout << "Dog's Default constructor called." << std::endl;
+   std::cout << "Dog's Default construcotr called." << std::endl;
 }
 
-Dog::Dog(std::string ty) : Animal(ty)
+Dog::Dog(std::string type, Brain& brain) : Animal(type)
 {
-   std::cout << "Dog's Parametric construcotr called." << std::endl;
+   _brain = new Brain(brain);
+   std::cout << "Dog's Parametric Constructor called." << std::endl;
 }
+
 Dog::Dog(Dog const& other) : Animal(other)
 {
-   std::cout << "Dog's Copy Construcotr called." << std::endl;
+   _brain = new Brain(*other._brain);
+   std::cout << "Dog's Copy constructor called." << std::endl;
 }
 
-Dog& Dog::operator=(Dog const& rhs)
+Dog& Dog::operator=(Dog const& other)
 {
-   std::cout << "Dog's Copy Assignement called." << std::endl;
-   Animal::operator=(rhs);
+   if (this != &other)
+   {
+      std::cout << "Dog's Copy assignement called." << std::endl;
+      Animal::operator=(other);
+      if (_brain)
+         delete _brain;
+      _brain = new Brain(*other._brain);
+   }
    return *this;
 }
 
 Dog::~Dog()
 {
+   delete _brain;
    std::cout << "Dog's Deconstructor called." << std::endl;
 }
 

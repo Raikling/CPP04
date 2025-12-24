@@ -7,7 +7,7 @@ Brain::Brain()
     std::cout << "Brain's Default constructor called" << std::endl;
 }
 
-Brain::Brain(std::string &idea) //why the & here?
+Brain::Brain(std::string idea)
 {
     for (int i= 0; i < 100; i++)
         _ideas[i] = idea;
