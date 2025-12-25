@@ -26,11 +26,13 @@ int main(void)
       animals[i]->makeSound();
    }
 
-   // std::cout << "--------DELETING----------" << std::endl;
-   // for (int i = 0; i < size; i++)
-   // {
-   //    delete animals[i];
-   // }
+   std::cout << "--------DELETING----------" << std::endl;
+   for (int i = 0; i < size; i++)
+   {
+      delete animals[i];
+   }
+
+
 
    
    
