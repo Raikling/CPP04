@@ -2,7 +2,7 @@
 
 Cat::Cat(): Animal("Cat")
 {
-   _brain = new Brain;
+   _brain = new Brain();
    std::cout << "Cat's Default Constructor called." << std::endl;
 }
 
@@ -14,7 +14,7 @@ Cat::Cat(std::string type, Brain& brain) : Animal(type)
 
 Cat::Cat(Cat const& other) : Animal(other)
 {
-   _brain = new Brain(*other._brain); //why the star here
+   _brain = new Brain(*other._brain);
    std::cout << "Cat's Copy constructor Called." << std::endl;
 }
 
@@ -33,8 +33,8 @@ Cat& Cat::operator=(Cat const& other)
 
 Cat::~Cat()
 {
-   delete _brain;
    std::cout << "Cat's Deconstructor called." << std::endl;
+   delete _brain;
 }
 
 void Cat::makeSound() const

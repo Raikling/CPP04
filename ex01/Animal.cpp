@@ -10,10 +10,6 @@ Animal::Animal(std::string ty):_type(ty)
    std::cout << "Animal's Parametric Constuctor called." << std::endl;
 }
 
-std::string Animal::getType() const
-{
-   return this->_type;
-}
 
 Animal::Animal(Animal const& other)
 {
@@ -36,6 +32,10 @@ Animal::~Animal()
 }
 
 
+std::string Animal::getType() const
+{
+   return this->_type;
+}
 
 void Animal::makeSound() const
 {

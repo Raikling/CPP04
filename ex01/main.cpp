@@ -8,7 +8,7 @@
 
 int main(void)
 {
-   const int size = 20;
+   const int size = 4;
    Animal* animals[size];
 
    for (int i = 0; i < size; i++)
@@ -32,9 +32,8 @@ int main(void)
       delete animals[i];
    }
 
-
-
    
+
    
    return 0;
 }

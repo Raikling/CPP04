@@ -10,12 +10,14 @@ class Cat : public Animal
       Brain* _brain;
    public:
       Cat();
-      Cat(std::string type, Brain& brain);
+      Cat(std::string type, Brain& brain); // why the Brain& here? wont just std::string work here ?
       Cat(Cat const& other);
       Cat& operator=(Cat const& other);
       ~Cat();
 
       void makeSound() const;
+
+      
 
 };
 

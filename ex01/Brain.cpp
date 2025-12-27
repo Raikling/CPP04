@@ -7,12 +7,13 @@ Brain::Brain()
     std::cout << "Brain's Default constructor called" << std::endl;
 }
 
-Brain::Brain(std::string idea)
+Brain::Brain(std::string& idea)
 {
     for (int i= 0; i < 100; i++)
         _ideas[i] = idea;
     std::cout << "Brain's Parametric constructor called." << std::endl;
 }
+
 
 Brain::Brain(Brain const& other)
 {
@@ -37,4 +38,5 @@ Brain::~Brain()
 {
     std::cout << "Brain's Deconstructor called." << std::endl;
 }
+
 
