@@ -32,6 +32,23 @@ int main(void)
       delete animals[i];
    }
 
+   std::cout << "--------Testing Shallow----------" << std::endl;
+   Dog OgDog;
+   std::cout <<"---------------------------------" << std::endl;
+   Dog CopyDog = OgDog;
+   std::cout <<"---------------------------------" << std::endl;
+   CopyDog = OgDog;
+   std::cout <<"---------------------------------" << std::endl;
+
+   std::cout <<"---------------------------------" << std::endl;
+   std::cout <<"---------------------------------" << std::endl;
+   Cat OgCat;
+   std::cout <<"---------------------------------" << std::endl;
+   Cat CopyCat(OgCat);
+   std::cout <<"---------------------------------" << std::endl;
+   CopyCat = OgCat;
+   std::cout <<"---------------------------------" << std::endl;
+
    
 
    

@@ -22,11 +22,11 @@ Cat& Cat::operator=(Cat const& other)
 {
    if (this != &other)
    {
-      std::cout << "Cat's Copy assignement called." << std::endl;
       Animal::operator=(other);
       if(_brain)
          delete _brain;
       _brain = new Brain(*other._brain);
+      std::cout << "Cat's Copy assignement called." << std::endl;
    }
    return *this;
 }
