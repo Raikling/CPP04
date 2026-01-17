@@ -10,7 +10,7 @@ int main(void)
 {
    Cat c;
    Dog d;
-   //AAnimal a; //throws error since AAnimal is abstract
+   //AAnimal a; //throws error since AAnimal is Abstract
    //AAnimal *anim = new AAnimal(); //here too
 
    c.makeSound();
