@@ -33,26 +33,19 @@ int main(void)
    }
 
    std::cout << "--------Testing Shallow----------" << std::endl;
-   Dog OgDog;
-   std::cout <<"---------------------------------" << std::endl;
-   Dog CopyDog = OgDog;
-   std::cout <<"---------------------------------" << std::endl;
-   CopyDog = OgDog;
-   std::cout <<"---------------------------------" << std::endl;
 
-   std::cout <<"---------------------------------" << std::endl;
-   std::cout <<"---------------------------------" << std::endl;
-   Cat OgCat;
-   std::cout <<"---------------------------------" << std::endl;
-   Cat CopyCat(OgCat);
-   std::cout <<"---------------------------------" << std::endl;
-   CopyCat = OgCat;
-   std::cout <<"---------------------------------" << std::endl;
+   Cat cat1;
+   Cat cat2 = cat1;
+   Cat cat3(cat2);
 
-   
-
+   std::cout << "cat 1 brain address: " << cat1.getBrain() << std::endl;
+   std::cout << "cat 2 brain address: " << cat2.getBrain() << std::endl;
+   std::cout << "cat 3 brain address: " << cat3.getBrain() << std::endl;
+   if (cat1.getBrain() != cat2.getBrain() && cat3.getBrain() != cat2.getBrain())
+      std::cout << "Deep Copy Success - Different Brain object" << std::endl;
+   else
+      std::cout << "Shallow copy PROBLEM - Same Brain object" << std::endl;
    
    return 0;
 }
-
 

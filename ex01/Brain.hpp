@@ -14,6 +14,7 @@ class Brain
         Brain(Brain const& other);
         Brain& operator=(Brain const& other);
         ~Brain();
+
 };
 
 
