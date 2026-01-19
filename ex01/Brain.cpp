@@ -26,10 +26,10 @@ Brain& Brain::operator=(Brain const& other)
 {
     if(this != &other)
     {
+        std::cout << "Brain's Copy assignment operator called." << std::endl;
         for (int i = 0; i < 100; i++)
-        this->_ideas[i] = other._ideas[i];
+            this->_ideas[i] = other._ideas[i];
     }
-    std::cout << "Brain's Copy assignment operator called." << std::endl;
     return *this;
 }
 
@@ -37,4 +37,3 @@ Brain::~Brain()
 {
     std::cout << "Brain's Deconstructor called." << std::endl;
 }
-

@@ -8,6 +8,7 @@ class Dog : public Animal
 {
    private:
       Brain* _brain;
+      
    public:
       Dog();
       Dog(std::string type, Brain& brain);
@@ -18,7 +19,5 @@ class Dog : public Animal
       void makeSound() const;
       Brain* getBrain() const;
 };
-
-
 
 #endif

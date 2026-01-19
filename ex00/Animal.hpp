@@ -9,11 +9,9 @@ class Animal
    protected:
       std::string _type;
 
-
    public:
       Animal();
       Animal(std::string ty);
-      
       Animal(Animal const& other);
       Animal& operator=(Animal const& rhs);
       virtual ~Animal();
@@ -21,7 +19,6 @@ class Animal
       std::string getType()const;
       virtual void makeSound() const;
 };
-
 
 
 #endif
