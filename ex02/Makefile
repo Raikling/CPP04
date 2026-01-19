@@ -1,4 +1,4 @@
-NAME = Brains
+NAME = Abstract
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
